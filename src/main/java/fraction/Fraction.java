@@ -8,10 +8,6 @@ public class Fraction {
         this.value = value;
     }
 
-    public Fraction() {
-
-    }
-
     public Fraction add(Fraction f2) {
         return new Fraction(0);
     }

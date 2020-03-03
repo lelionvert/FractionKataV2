@@ -8,8 +8,8 @@ public class FractionTest {
 
     @Test
     public void additionOfTwoFractionShouldReturnAFraction() {
-        Fraction f1 = new Fraction();
-        Fraction f2 = new Fraction();
+        Fraction f1 = new Fraction(0);
+        Fraction f2 = new Fraction(0);
         Fraction f3 = f1.add(f2);
         assertThat(f3).isInstanceOf(Fraction.class);
     }
@@ -21,4 +21,6 @@ public class FractionTest {
         Fraction f3 = f1.add(f2);
         assertThat(f3.getValue()).isEqualTo(0);
     }
+
+
 }
