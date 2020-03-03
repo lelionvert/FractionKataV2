@@ -9,7 +9,14 @@ public class Fraction {
     }
 
     public Fraction add(Fraction f2) {
-        return new Fraction(0);
+
+        if(f2.getValue() == 1){
+            return f2;
+        }
+        else{
+            return new Fraction(0);
+        }
+
     }
 
     public Integer getValue() {
