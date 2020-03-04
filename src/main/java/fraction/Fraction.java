@@ -9,9 +9,9 @@ public class Fraction {
     }
 
     public Fraction add(Fraction other) {
-        if (other.getValue() != 0) {
-            if (this.getValue() != 0) {
-                return new Fraction(3);
+        if (other.value != 0) {
+            if (this.value != 0) {
+                return new Fraction(1 + other.value);
             }
             return other;
         }
@@ -19,15 +19,11 @@ public class Fraction {
         return new Fraction(0);
     }
 
-    public Integer getValue() {
-        return this.value;
-    }
-
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Fraction){
             Fraction other = (Fraction) obj;
-            return other.getValue().equals(this.value);
+            return other.value.equals(this.value);
         }
         return false;
     }
