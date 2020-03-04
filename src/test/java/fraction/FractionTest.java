@@ -31,6 +31,14 @@ public class FractionTest {
     }
 
     @Test
+    public void additionOfOneAndTwo(){
+        Fraction operandA = new Fraction(1);
+        Fraction operandB = new Fraction(2);
+        Fraction result = operandA.add(operandB);
+        assertThat(result.getValue()).isEqualTo(3);
+    }
+
+    @Test
     public void additionOfZeroAndTwo() {
         Fraction operandA = new Fraction(0);
         Fraction operandB = new Fraction(2);
