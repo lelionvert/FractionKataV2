@@ -12,11 +12,8 @@ public class Fraction {
         if (this.value == 0 && other.value == 0) {
             return new Fraction(0);
         }
-        if (this.value == 0 && other.value != 0) {
-            return other;
-        }
-        return new Fraction(this.value + other.value);
 
+        return new Fraction(this.value + other.value);
     }
 
     @Override
