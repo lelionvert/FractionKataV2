@@ -45,4 +45,11 @@ public class FractionTest {
         Fraction result = operandA.add(operandB);
         assertThat(result.getValue()).isEqualTo(2);
     }
+
+    @Test
+    public void equalityOfFractions(){
+        Fraction fraction = new Fraction(1);
+        Fraction fractionWithSameValue = new Fraction(1);
+        assertThat(fraction).isEqualTo(fractionWithSameValue);
+    }
 }
