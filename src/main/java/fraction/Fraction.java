@@ -9,7 +9,7 @@ public class Fraction {
     }
 
     public Fraction add(Fraction other) {
-        if (other.value == 0) {
+        if (other.value == 0 && this.value == 0) {
             return new Fraction(0);
         }
         if (this.value == 0) {
