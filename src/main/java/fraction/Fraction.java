@@ -25,7 +25,10 @@ public class Fraction {
 
     @Override
     public boolean equals(Object obj) {
-        Fraction other = (Fraction) obj;
-        return other.getValue().equals(this.value);
+        if (obj instanceof Fraction){
+            Fraction other = (Fraction) obj;
+            return other.getValue().equals(this.value);
+        }
+        return false;
     }
 }
