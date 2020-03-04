@@ -54,4 +54,12 @@ public class FractionTest {
         assertThat(result).isEqualTo(new Fraction(2));
     }
 
+    @Test
+    public void additionOfTwoAndOne() {
+        Fraction operandA = new Fraction(2);
+        Fraction operandB = new Fraction(1);
+        Fraction result = operandA.add(operandB);
+        assertThat(result).isEqualTo(new Fraction(3));
+    }
+
 }
