@@ -29,4 +29,12 @@ public class FractionTest {
         Fraction result = operandA.add(operandB);
         assertThat(result.getValue()).isEqualTo(1);
     }
+
+    @Test
+    public void additionOfZeroAndTwo() {
+        Fraction operandA = new Fraction(0);
+        Fraction operandB = new Fraction(2);
+        Fraction result = operandA.add(operandB);
+        assertThat(result.getValue()).isEqualTo(2);
+    }
 }

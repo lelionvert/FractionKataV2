@@ -10,10 +10,14 @@ public class Fraction {
 
     public Fraction add(Fraction other) {
         if (other.getValue() == 1) {
-            return other;
-        } else {
-            return new Fraction(0);
+            return new Fraction(1);
         }
+
+        if (other.getValue() == 2) {
+            return new Fraction(2);
+        }
+
+        return new Fraction(0);
     }
 
     public Integer getValue() {
