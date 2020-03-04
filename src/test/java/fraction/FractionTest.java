@@ -19,7 +19,7 @@ public class FractionTest {
         Fraction operandA = new Fraction(0);
         Fraction operandB = new Fraction(0);
         Fraction result = operandA.add(operandB);
-        assertThat(result.getValue()).isEqualTo(0);
+        assertThat(result).isEqualTo(new Fraction(0));
     }
 
     @Test
@@ -27,7 +27,7 @@ public class FractionTest {
         Fraction operandA = new Fraction(0);
         Fraction operandB = new Fraction(1);
         Fraction result = operandA.add(operandB);
-        assertThat(result.getValue()).isEqualTo(1);
+        assertThat(result).isEqualTo(new Fraction(1));
     }
 
     @Test
@@ -35,7 +35,7 @@ public class FractionTest {
         Fraction operandA = new Fraction(1);
         Fraction operandB = new Fraction(2);
         Fraction result = operandA.add(operandB);
-        assertThat(result.getValue()).isEqualTo(3);
+        assertThat(result).isEqualTo(new Fraction(3));
     }
 
     @Test
@@ -43,13 +43,7 @@ public class FractionTest {
         Fraction operandA = new Fraction(0);
         Fraction operandB = new Fraction(2);
         Fraction result = operandA.add(operandB);
-        assertThat(result.getValue()).isEqualTo(2);
+        assertThat(result).isEqualTo(new Fraction(2));
     }
 
-    @Test
-    public void equalityOfFractions(){
-        Fraction fraction = new Fraction(1);
-        Fraction fractionWithSameValue = new Fraction(1);
-        assertThat(fraction).isEqualTo(fractionWithSameValue);
-    }
 }
