@@ -9,12 +9,8 @@ public class Fraction {
     }
 
     public Fraction add(Fraction other) {
-        if (other.getValue() == 1) {
-            return new Fraction(1);
-        }
-
-        if (other.getValue() == 2) {
-            return new Fraction(2);
+        if (other.getValue() != 0) {
+            return other;
         }
 
         return new Fraction(0);
