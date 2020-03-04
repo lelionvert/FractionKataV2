@@ -12,20 +12,16 @@ public class Fraction {
         if (this.value == 0 && other.value == 0) {
             return new Fraction(0);
         }
-        if (this.value == 0) {
+        if (this.value == 0 && other.value != 0) {
             return other;
         }
-        if (this.value == 2 && other.value == 1) {
-            return new Fraction(3);
-        }
-
-        return new Fraction(1 + other.value);
+        return new Fraction(this.value + other.value);
 
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Fraction){
+        if (obj instanceof Fraction) {
             Fraction other = (Fraction) obj;
             return other.value.equals(this.value);
         }
