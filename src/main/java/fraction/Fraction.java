@@ -7,6 +7,7 @@ public class Fraction {
 
     public Fraction(Integer value) {
         this.value = value;
+        this.denominator = 1;
     }
 
     public Fraction(Integer numerator, Integer denominator) {
@@ -27,7 +28,8 @@ public class Fraction {
             Fraction other = (Fraction) obj;
             if (other.denominator != null) {
                 if (this.denominator != null) {
-                    return true;
+                    return other.value.equals(this.value)
+                            && other.denominator.equals(this.denominator);
                 }
                 if (other.denominator == 2) {
                     return false;
