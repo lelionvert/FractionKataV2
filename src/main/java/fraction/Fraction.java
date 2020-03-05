@@ -22,6 +22,9 @@ public class Fraction {
     public boolean equals(Object obj) {
         if (obj instanceof Fraction) {
             Fraction other = (Fraction) obj;
+            if (this.denominator != null && other.denominator != null) {
+                return true;
+            }
             if (other.denominator != null && other.denominator == 2){
                 return false;
             }

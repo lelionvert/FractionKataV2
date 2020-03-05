@@ -34,5 +34,12 @@ public class EqualTest {
         assertThat(fractionWithOneArgument).isNotEqualTo(fractionWithTwoArguments);
     }
 
+    @Test
+    public void equalityOfOneHalfAndOneHalf(){
+        Fraction firstHalf = new Fraction(1,2);
+        Fraction secondHalf = new Fraction(1,2);
+        assertThat(firstHalf).isEqualTo(secondHalf);
+    }
+
 
 }
