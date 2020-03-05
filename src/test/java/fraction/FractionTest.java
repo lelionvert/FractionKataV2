@@ -70,4 +70,13 @@ public class FractionTest {
         assertThat(result).isEqualTo(new Fraction(1));
     }
 
+    @Test
+    public void additionOfTwoFractionsWithSameDenominator(){
+        Fraction operandA = new Fraction(1,3);
+        Fraction operandB = new Fraction(1,3);
+        Fraction result = operandA.add(operandB);
+        assertThat(result).isEqualTo(new Fraction(2,3));
+        assertThat(result).isNotEqualTo(new Fraction(2));
+    }
+
 }

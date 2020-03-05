@@ -27,5 +27,12 @@ public class EqualTest {
         assertThat(fraction).isNotEqualTo(otherObject);
     }
 
+    @Test
+    public void inequalityOfTwoInstancesOfDifferentConstructors(){
+        Fraction fractionWithOneArgument = new Fraction(1);
+        Fraction fractionWithTwoArguments = new Fraction(1,2);
+        assertThat(fractionWithOneArgument).isNotEqualTo(fractionWithTwoArguments);
+    }
+
 
 }
