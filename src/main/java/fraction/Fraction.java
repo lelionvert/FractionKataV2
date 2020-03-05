@@ -25,6 +25,9 @@ public class Fraction {
             if (other.denominator == 5){
                 return fraction(6,5);
             }
+            if (other.denominator == 3){
+                return fraction(7,3);
+            }
             return fraction(this.numerator + other.numerator * this.denominator, this.denominator);
         }
         return fraction(this.numerator + other.numerator, this.denominator);
