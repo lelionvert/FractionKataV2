@@ -109,4 +109,13 @@ public class FractionTest {
         Fraction result = operandA.add(operandB);
         assertThat(result).isEqualTo(fraction(6, 5));
     }
+
+    @Test
+    public void additionOfIntegerAndFractionCase1(){
+        Fraction operandA = integerFraction(1);
+        Fraction operandB = fraction(1, 5);
+        Fraction result = operandA.add(operandB);
+        assertThat(result).isEqualTo(fraction(6, 5));
+
+    }
 }
