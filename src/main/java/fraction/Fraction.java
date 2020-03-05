@@ -7,11 +7,7 @@ public class Fraction {
     private Integer numerator;
     private Integer denominator;
 
-    public Fraction(Integer numerator) {
-        this(numerator, DEFAULT_DENOMINATOR);
-    }
-
-    public Fraction(Integer numerator, Integer denominator) {
+    private Fraction(Integer numerator, Integer denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
     }
