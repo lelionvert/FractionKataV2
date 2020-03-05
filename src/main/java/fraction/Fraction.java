@@ -22,12 +22,7 @@ public class Fraction {
 
     public Fraction add(Fraction other) {
         if (!this.denominator.equals(other.denominator)) {
-            if (other.numerator == 2) {
-                return fraction(1, 3)
-                        .add(fraction(6, 3));
-            }
-            return fraction(1, 3)
-                    .add(fraction(3, 3));
+            return this.add(fraction(other.numerator * 3, 3));
         }
         return fraction(this.numerator + other.numerator, this.denominator);
     }
