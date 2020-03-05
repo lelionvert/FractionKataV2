@@ -76,7 +76,14 @@ public class FractionTest {
         Fraction operandB = new Fraction(1,3);
         Fraction result = operandA.add(operandB);
         assertThat(result).isEqualTo(new Fraction(2,3));
-        assertThat(result).isNotEqualTo(new Fraction(2));
+    }
+
+    @Test
+    public void additionOfTwoFractionsWithSameDenominatorCase2() {
+        Fraction operandA = new Fraction(1,5);
+        Fraction operandB = new Fraction(2,5);
+        Fraction result = operandA.add(operandB);
+        assertThat(result).isEqualTo(new Fraction(3,5));
     }
 
 }
