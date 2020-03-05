@@ -22,11 +22,13 @@ public class Fraction {
     public boolean equals(Object obj) {
         if (obj instanceof Fraction) {
             Fraction other = (Fraction) obj;
-            if (this.denominator != null && other.denominator != null) {
-                return true;
-            }
-            if (other.denominator != null && other.denominator == 2){
-                return false;
+            if (other.denominator != null) {
+                if (this.denominator != null) {
+                    return true;
+                }
+                if (other.denominator == 2) {
+                    return false;
+                }
             }
             return other.value.equals(this.value);
         }
