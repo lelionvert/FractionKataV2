@@ -16,8 +16,16 @@ public class Fraction {
         this.denominator = denominator;
     }
 
+    public static Fraction of(Integer numerator) {
+        return of(numerator,1);
+    }
+
     public Fraction add(Fraction other) {
-        return new Fraction(this.numerator + other.numerator, this.denominator);
+        return of(this.numerator + other.numerator, this.denominator);
+    }
+
+    public static Fraction of(Integer numerator, Integer denominator) {
+        return new Fraction(numerator, denominator);
     }
 
     @Override

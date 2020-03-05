@@ -8,82 +8,83 @@ public class FractionTest {
 
     @Test
     public void additionOfTwoFractionShouldReturnAFraction() {
-        Fraction operandA = new Fraction(0);
-        Fraction operandB = new Fraction(0);
+        Fraction operandA = Fraction.of(0);
+        Fraction operandB = Fraction.of(0);
         Fraction result = operandA.add(operandB);
         assertThat(result).isInstanceOf(Fraction.class);
     }
 
     @Test
     public void additionOfZeroAndZero() {
-        Fraction operandA = new Fraction(0);
-        Fraction operandB = new Fraction(0);
+        Fraction operandA = Fraction.of(0);
+        Fraction operandB = Fraction.of(0);
         Fraction result = operandA.add(operandB);
-        assertThat(result).isEqualTo(new Fraction(0));
+        assertThat(result).isEqualTo(Fraction.of(0));
     }
 
     @Test
     public void additionOfZeroAndOneShouldReturnOne() {
-        Fraction operandA = new Fraction(0);
-        Fraction operandB = new Fraction(1);
+        Fraction operandA = Fraction.of(0);
+        Fraction operandB = Fraction.of(1);
         Fraction result = operandA.add(operandB);
-        assertThat(result).isEqualTo(new Fraction(1));
+        assertThat(result).isEqualTo(Fraction.of(1));
     }
 
     @Test
-    public void additionOfOneAndTwo(){
-        Fraction operandA = new Fraction(1);
-        Fraction operandB = new Fraction(2);
+    public void additionOfOneAndTwo() {
+        Fraction operandA = Fraction.of(1);
+        Fraction operandB = Fraction.of(2);
         Fraction result = operandA.add(operandB);
-        assertThat(result).isEqualTo(new Fraction(3));
+        assertThat(result).isEqualTo(Fraction.of(3));
     }
 
     @Test
     public void additionOfZeroAndTwo() {
-        Fraction operandA = new Fraction(0);
-        Fraction operandB = new Fraction(2);
+        Fraction operandA = Fraction.of(0);
+        Fraction operandB = Fraction.of(2);
         Fraction result = operandA.add(operandB);
-        assertThat(result).isEqualTo(new Fraction(2));
+        assertThat(result).isEqualTo(Fraction.of(2));
     }
 
     @Test
     public void additionOfOneAndOne() {
-        Fraction operandA = new Fraction(1);
-        Fraction operandB = new Fraction(1);
+        Fraction operandA = Fraction.of(1);
+        Fraction operandB = Fraction.of(1);
         Fraction result = operandA.add(operandB);
-        assertThat(result).isEqualTo(new Fraction(2));
+        assertThat(result).isEqualTo(Fraction.of(2));
     }
 
     @Test
     public void additionOfTwoAndOne() {
-        Fraction operandA = new Fraction(2);
-        Fraction operandB = new Fraction(1);
+        Fraction operandA = Fraction.of(2);
+        Fraction operandB = Fraction.of(1);
         Fraction result = operandA.add(operandB);
-        assertThat(result).isEqualTo(new Fraction(3));
+        assertThat(result).isEqualTo(Fraction.of(3));
     }
 
     @Test
     public void additionOfOneAndZero() {
-        Fraction operandA = new Fraction(1);
-        Fraction operandB = new Fraction(0);
+        Fraction operandA = Fraction.of(1);
+        Fraction operandB = Fraction.of(0);
         Fraction result = operandA.add(operandB);
-        assertThat(result).isEqualTo(new Fraction(1));
+        assertThat(result).isEqualTo(Fraction.of(1));
     }
 
     @Test
-    public void additionOfTwoFractionsWithSameDenominator(){
-        Fraction operandA = new Fraction(1,3);
-        Fraction operandB = new Fraction(1,3);
+    public void additionOfTwoFractionsWithSameDenominator() {
+        Fraction operandA = Fraction.of(1, 3);
+        Fraction operandB = Fraction.of(1, 3);
         Fraction result = operandA.add(operandB);
-        assertThat(result).isEqualTo(new Fraction(2,3));
+        assertThat(result).isEqualTo(Fraction.of(2, 3));
     }
 
     @Test
     public void additionOfTwoFractionsWithSameDenominatorCase2() {
-        Fraction operandA = new Fraction(1,5);
-        Fraction operandB = new Fraction(2,5);
+        Fraction operandA = Fraction.of(1, 5);
+        Fraction operandB = Fraction.of(2, 5);
         Fraction result = operandA.add(operandB);
-        assertThat(result).isEqualTo(new Fraction(3,5));
+        assertThat(result).isEqualTo(Fraction.of(3, 5));
     }
+
 
 }
