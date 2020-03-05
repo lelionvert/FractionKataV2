@@ -2,24 +2,25 @@ package fraction;
 
 public class Fraction {
 
-    private Integer value;
+    private static final Integer DEFAULT_DENOMINATOR = 1;
+
+    private Integer numerator;
     private Integer denominator;
 
-    public Fraction(Integer value) {
-        this.value = value;
-        this.denominator = 1;
+    public Fraction(Integer numerator) {
+        this(numerator, DEFAULT_DENOMINATOR);
     }
 
     public Fraction(Integer numerator, Integer denominator) {
-        this.value = numerator;
+        this.numerator = numerator;
         this.denominator = denominator;
     }
 
     public Fraction add(Fraction other) {
-        if (this.denominator != null && this.denominator == 3) {
+        if (this.denominator == 3) {
             return new Fraction(2, 3);
         }
-        return new Fraction(this.value + other.value);
+        return new Fraction(this.numerator + other.numerator);
     }
 
     @Override
@@ -27,7 +28,7 @@ public class Fraction {
         if (obj instanceof Fraction) {
             Fraction other = (Fraction) obj;
 
-            return other.value.equals(this.value)
+            return other.numerator.equals(this.numerator)
                     && other.denominator.equals(this.denominator);
 
         }
@@ -37,7 +38,7 @@ public class Fraction {
     @Override
     public String toString() {
         return "Fraction{" +
-                "value=" + value +
+                "numerator=" + numerator +
                 ", denominator=" + denominator +
                 '}';
     }
