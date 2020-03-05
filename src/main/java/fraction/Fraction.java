@@ -17,14 +17,7 @@ public class Fraction {
     }
 
     public Fraction add(Fraction other) {
-        if ((this.numerator + other.numerator) == 2 && this.denominator == 3) {
-            return new Fraction(2, 3);
-        }
-
-        if ((this.numerator + other.numerator) == 3 && this.denominator == 5) {
-            return new Fraction(3, 5);
-        }
-        return new Fraction(this.numerator + other.numerator);
+        return new Fraction(this.numerator + other.numerator, this.denominator);
     }
 
     @Override
