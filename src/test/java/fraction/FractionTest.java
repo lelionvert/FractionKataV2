@@ -86,5 +86,19 @@ public class FractionTest {
         assertThat(result).isEqualTo(fraction(3, 5));
     }
 
+    @Test
+    public void additionOfFractionAndInteger() {
+        Fraction operandA = fraction(1, 3);
+        Fraction operandB = integerFraction(1);
+        Fraction result = operandA.add(operandB);
+        assertThat(result).isEqualTo(fraction(4, 3));
+    }
 
+    @Test
+    public void additionOfFractionAndIntegerCase2() {
+        Fraction operandA = fraction(1, 3);
+        Fraction operandB = integerFraction(2);
+        Fraction result = operandA.add(operandB);
+        assertThat(result).isEqualTo(fraction(7, 3));
+    }
 }

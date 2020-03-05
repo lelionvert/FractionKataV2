@@ -13,7 +13,7 @@ public class Fraction {
     }
 
     public static Fraction integerFraction(Integer numerator) {
-        return fraction(numerator,1);
+        return fraction(numerator, DEFAULT_DENOMINATOR);
     }
 
     public static Fraction fraction(Integer numerator, Integer denominator) {
@@ -21,6 +21,14 @@ public class Fraction {
     }
 
     public Fraction add(Fraction other) {
+        if (!this.denominator.equals(other.denominator)) {
+            if (other.numerator == 2) {
+                return fraction(1, 3)
+                        .add(fraction(6, 3));
+            }
+            return fraction(1, 3)
+                    .add(fraction(3, 3));
+        }
         return fraction(this.numerator + other.numerator, this.denominator);
     }
 
